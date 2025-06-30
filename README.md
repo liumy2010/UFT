@@ -70,6 +70,11 @@ python run.py
 
 `Qwen2.5-0.5/1.5B` / `Llama-3.2-1B` can be trained with 1 `H100` by setting `n_rollouts=2`
 
+#### Major Modifications from VERL
+
+- Concatenating hint to the prompt: [RLHFDataset](https://github.com/liumy2010/UFT/blob/ad3c8ec7d258d4e4cf3f359dd75925d0f127a520/verl/utils/dataset/rl_dataset.py#L136)
+- Modifications on the objective function: [policy_loss](https://github.com/liumy2010/UFT/blob/ad3c8ec7d258d4e4cf3f359dd75925d0f127a520/verl/workers/actor/dp_actor.py#L284)
+
 ### Evaluate
 
 Change `model` and `dataset` to the the model name (*e.g.*, `Qwen/Qwen2.5-1.5B`) and dataset name (*e.g.*, `countdown`) to evaluate
